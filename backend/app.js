@@ -4,9 +4,13 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-// installed
+// custom installed dependencies
 var exphbs = require('express-handlebars');
+var mongoose = require('mongoose');
 
+// connect with mongodb
+mongoose.connect('mongodb://localhost:27017/onlineshop');
+// routes
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
